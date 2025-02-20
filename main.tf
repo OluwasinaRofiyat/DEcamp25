@@ -8,24 +8,20 @@ terraform {
 }
 
 provider "google" {
-# Credentials only needs to be set if you do not have the GOOGLE_APPLICATION_CREDENTIALS set
   credentials = "/workspaces/DEcamp25/.ipynb_checkpoints/keys/my-credentials.json"
-  project = "<decamp25>"
-  region  = "us-central1"
+  project     = "decamp25"  # Update this to your actual project ID
+  region      = "us-central1"
 }
 
-
-
 resource "google_storage_bucket" "decamp25" {
-  name          = "<green_taxi_terraform_bucket>"
+  name          = "green-taxi-bucket-2025"  # Compliant name
   location      = "US"
 
-  # Optional, but recommended settings:
   storage_class = "STANDARD"
   uniform_bucket_level_access = true
 
   versioning {
-    enabled     = true
+    enabled = true
   }
 
   lifecycle_rule {
@@ -33,7 +29,7 @@ resource "google_storage_bucket" "decamp25" {
       type = "Delete"
     }
     condition {
-      age = 30  // days
+      age = 30 // days
     }
   }
 
@@ -41,17 +37,9 @@ resource "google_storage_bucket" "decamp25" {
 }
 
 
-resource "google_bigquery_dataset" "dataset" {
-  dataset_id = "<The Dataset Name You Want to Use>"
-  project    = "<Your Project ID>"
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id = "demo_dataset"
+  project    = "decamp25"
   location   = "US"
 }
-
-
-
-
-
-
-
-
-
