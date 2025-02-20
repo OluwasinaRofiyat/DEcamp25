@@ -2,44 +2,37 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "4.51.0"
+      version = "5.6.0"
     }
   }
 }
 
 provider "google" {
-  credentials = "/workspaces/DEcamp25/.ipynb_checkpoints/keys/my-credentials.json"
-  project     = "decamp25"  # Update this to your actual project ID
-  region      = "us-central1"
+  credentials = file(var.credentials)
+  project     = var.project
+  region      = var.region
 }
 
-resource "google_storage_bucket" "decamp25" {
-  name          = "green-taxi-bucket-2025"  # Compliant name
-  location      = "US"
 
-  storage_class = "STANDARD"
-  uniform_bucket_level_access = true
+resource "google_storage_bucket" "demo-bucket" {
+  name          = var.gcs_bucket_name
+  location      = var.location
+  force_destroy = true
 
-  versioning {
-    enabled = true
-  }
 
   lifecycle_rule {
-    action {
-      type = "Delete"
-    }
     condition {
-      age = 30 // days
+      age = 1
+    }
+    action {
+      type = "AbortIncompleteMultipartUpload"
     }
   }
-
-  force_destroy = true
 }
 
 
 
 resource "google_bigquery_dataset" "demo_dataset" {
-  dataset_id = "demo_dataset"
-  project    = "decamp25"
-  location   = "US"
+  dataset_id = var.bq_dataset_name
+  location   = var.location
 }
