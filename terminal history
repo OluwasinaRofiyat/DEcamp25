@@ -1,0 +1,76 @@
+ 1  python --version
+    2  pip list
+    3  docker --version
+    4  clear
+    5  terraform --version
+    6  wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+    7  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+    8  sudo apt update && sudo apt install terraform
+    9  terraform --version
+   10  jupyter notebook
+   11  pip install jupyter
+   12  jupyter notebook
+   13  docker run -it   -e POSTGRES_USER=root   -e POSTGRES_PASSWORD=root   -e POSTGRES_DB=ny_taxi   -v c:/workspaces/DEcamp25:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+   14  docker run -it   -e POSTGRES_USER=root   -e POSTGRES_PASSWORD=root   -e POSTGRES_DB=ny_taxi   -v $(pwd)/workspaces/DEcamp25:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+   15  exit
+   16  jupyter notebook
+   17  docker ps
+   18  docker start <container_name>
+   19  docker start <decamp25>
+   20  docker start <decamp25>@OluwasinaRofiyat ➜ /workspaces/DEcamp25
+   21  docker
+   22  docker start
+   23  docker run -it     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"     -e PGADMIN_DEFAULT_PASSWORD="root"     -p 8080:80     dpage/pgadmin4
+   24  psql -h localhost -U username -d dbname
+   25  docker ps
+   26  python --version
+   27  docker --version
+   28  terraform --version
+   29  docker run -it   -e  POSTGRES_USER=root  -e  POSTGRES_PASSWORD=root  -e  POSTGRES_DB=ny_taxi  -v  c:/workpispaces/DEcamp25  -p  5432:5432   postgres:13
+   30  clear
+   31  docker run -it     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"     -e PGADMIN_DEFAULT_PASSWORD="root"     -p 8080:80     dpage/pgadmin4
+   32  clear
+   33  terraform init
+   34  terraform plan
+   35  teraform destroy
+   36  terraform destroy
+   37  terraform apply
+   38  terraform init -upgrade
+   39  terraform providers
+   40  terraform destroy
+   41  rm -rf .terraform .terraform.lock.hcl
+   42  terraform init
+   43  rm -rf .terraform .terraform.lock.hcl
+   44  terraform init
+   45  rm -rf .terraform .terraform.lock.hcl
+   46  terraform init
+   47  rm -rf .terraform .terraform.lock.hcl
+   48  terraform init
+   49  terraform plan
+   50  yes
+   51  docker run -it   -e  POSTGRES_USER=root  -e  POSTGRES_PASSWORD=root  -e  POSTGRES_DB=ny_taxi  -v  c:/workpispaces/DEcamp25  -p  5432:5432   postgres:13
+   52  history
+   53  docker run -it     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"     -e PGADMIN_DEFAULT_PASSWORD="root"     -p 8080:80     dpage/pgadmin4
+   54  docker run -it     -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"     -e PGADMIN_DEFAULT_PASSWORD="root"     -p 8080:80     dpage/pgadmin4
+   55  docker run -it   -e  POSTGRES_USER=root  -e  POSTGRES_PASSWORD=root  -e  POSTGRES_DB=ny_taxi  -v  c:/workpispaces/DEcamp25  -p  5432:5432   --network=pg-network2   --name pg-database2   postgres:13
+   56  docker-compose
+   57  docker ps
+   58  docker-compose
+   59  docker-compose up
+   60  docker-compose --version
+   61  ls -l | grep docker-compose
+   62  docker-compose up
+   63  docker-compose updocker-compose updocker-compose updocker-compose upvdddddddddddockerurl2="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv" 
+   64  url2="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv" 
+   65  docker-compose upurl2="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_zone_lookup.csv" 
+   66  url="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-09.csv.gz" 
+   67  docker-compose up
+   68  jupyter notebook
+   69  jupyter notebook list
+   70  jupyter
+   71  jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser
+   72  pip list
+   73  terraform --version
+   74  pip install jupyter
+   75  jupyter notebook
+   76  history
